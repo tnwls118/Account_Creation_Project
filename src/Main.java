@@ -83,6 +83,32 @@ public class Main {
                     System.out.println("조회 가능한 계정이 없습니다.");
                 }
             }
+            //member 수정 기능
+            else if (cmd.equals("member correction")) {
+                System.out.println("수정 게시물 번호:");
+                int num = sc.nextInt();
+                sc.nextLine();
+                boolean correctioned = false;
+                for (int i = 0; i < members.size(); i++) {
+                    if (members.get(i).getnum() == num) {
+                        System.out.println("ID:");
+                        String ID = sc.nextLine();
+                        System.out.println("PW:");
+                        String PW = sc.nextLine();
+                        System.out.println("REPW:");
+                        String REPW = sc.nextLine();
+
+                        Member member1 = new Member(num, ID, PW, Time.time());
+                        members.set(i, member1);
+                        System.out.println(num + "계정 정보가 수정되었습니다.");
+                        correctioned = true;
+                        break;
+                    } else if (!correctioned) {
+                        System.out.println("패스워드를 재확인해주세요");
+                    }
+                }
+
+            }
             //sytem 종료 기능
             else if (cmd.equals("system.out")) {
                 break;
