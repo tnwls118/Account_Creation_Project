@@ -9,7 +9,7 @@ public class Main {
         ArrayList<Member> members = new ArrayList<>();
 
         // 프로그램 시작
-        System.out.println("명령어 안내\n1.member join\n2.system.out\n3.memeber list\n4.member delete\n5.member detail\n6.login\n7.logout");
+        System.out.println("명령어 안내\n1.member join\n2.system.out\n3.memeber list\n4.member delete\n5.member detail\n6.member correction\n7.login\n8.logout");
 
         while (true) {
             System.out.println("\n명령어를 입력하세요:");
